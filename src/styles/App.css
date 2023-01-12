@@ -1,0 +1,125 @@
+html {
+  background-color: #000;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  padding: 1rem;
+}
+
+.windowContent {
+  padding: 1rem;
+  padding-top: 0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row > *+* {
+  margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+  .row {
+    flex-direction: column;
+  }
+
+  .row > *+* {
+    margin-left: 0;
+  }
+
+  .status-bar-field {
+    border-right: none;
+    border-bottom: 1px solid #cfcfcf;
+    display: block;
+    padding-left: 0.5rem !important;
+  }
+
+  .status-bar {
+    display: block !important;
+  }
+
+  .field-row-stacked {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .field-row-stacked > * {
+    display: inline;
+  }
+  
+  input[type="number"] {
+    width: 6rem;
+  }
+  
+  fieldset {
+    width: 12rem !important;
+  }
+
+}
+
+.window fieldset {
+  width: 8rem;
+}
+
+
+progress {
+  width: 100%;
+}
+
+.window {
+  position: absolute;
+}
+
+canvas {
+  position: absolute;
+  border-radius: 6px;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title-bar {
+  cursor: move;
+}
+
+.title-bar, .title-bar * {
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.activateWindows {
+  color: white;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  font-family: Segoe UI;
+}
+
+.activateWindows * {
+  margin: 0;
+}
+
+.activateWindows > * + * {
+  margin-top: 0.25rem;
+}
+
+.activateWindows > *:first-child {
+  font-size: 1.5rem;
+}
+
+.activateWindows > *:first-child {
+  font-size: 1rem;
+}
